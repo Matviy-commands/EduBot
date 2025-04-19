@@ -175,9 +175,9 @@ Note that any time you start jupyter lab in the future, you'll need to follow th
 
 ## Usage
 
-1. Run the `visualize_vectors.py` script to generate 2D and 3D visualizations of the vector store.
+1. Run the `visualize_vectors.py` script in Jupyter Lab to generate 2D and 3D visualizations of the vector store.
    ```bash
-   python visualize_vectors.py
+   !python visualize_vectors.py
    ```
 
 2. The visualizations will be saved as HTML files (`visualization_2d.html` and `visualization_3d.html`) and opened in your default web browser.
