@@ -9,7 +9,7 @@ from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 
 
-# Завантаження ключа API
+# Download API key
 load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
@@ -18,14 +18,14 @@ persist_directory = "vector_db"
 embedding = OpenAIEmbeddings(openai_api_key=openai_api_key)
 vectordb = Chroma(persist_directory=persist_directory, embedding_function=embedding)
 
-# Отримання всіх документів та векторів
+# Get all documents and vectors
 docs = vectordb._collection.get(include=["embeddings", "metadatas", "documents"])
 
 vectors = np.array(docs["embeddings"])
 documents = docs["documents"]
 doc_types = [meta.get("doc_type", "unknown") for meta in docs["metadatas"]]
 
-# Простий кольоровий маппер
+# Simple color mapper
 colors = [[ 'green', 'red', 'yellow'][['des_school', 'our_team', 'intro'].index(t)] for t in doc_types]
 
 def visualize_2d():

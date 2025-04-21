@@ -1,4 +1,4 @@
-# LLM Engineering - Master AI and LLMs
+# EduBot
 
 ## Setup instructions for Linux
 
@@ -9,9 +9,6 @@ I should reveal that I had ChatGPT make this document based on the Mac instructi
 ___
 
 Setting up a powerful environment to work at the forefront of AI requires some effort, but these instructions should guide you smoothly. If you encounter any issues, don't hesitate to reach out to me. I'm here to ensure you get set up without hassle.
-
-Email: ed@edwarddonner.com  
-LinkedIn: https://www.linkedin.com/in/eddonner/  
 
 For this setup, we'll use Anaconda to create a reliable environment for your AI work. Alternatively, I've provided a lighter option if you prefer to avoid Anaconda. Let's get started!
 
@@ -41,9 +38,9 @@ cd ~/Projects
 3. **Clone the repository:**
 
 Run the following command in your terminal:
-`git clone https://github.com/ed-donner/llm_engineering.git`
+`git clone https://github.com/Matviy-commands/EduBot.git`
 
-This creates a new directory `llm_engineering` within your Projects folder and downloads the course code. Use `cd llm_engineering` to enter the directory. This is your "project root directory."
+This creates a new directory `EduBot` within your Projects folder and downloads the course code. Use `cd EduBot` to enter the directory. This is your "project root directory."
 
 ### Part 2: Install Anaconda environment
 
@@ -58,7 +55,7 @@ If this Part 2 gives you any trouble, refer to the alternative Part 2B below.
 2. **Set up the environment:**
 
 - Open a terminal and navigate to the "project root directory" using:
-`cd ~/Projects/llm_engineering` (adjust the path as necessary).
+`cd ~/Projects/EduBot` (adjust the path as necessary).
 - Run `ls` to confirm the presence of subdirectories for each week of the course.
 - Create the environment: `conda env create -f environment.yml`
 
@@ -70,7 +67,7 @@ You should see `(llms)` in your prompt, indicating successful activation.
 
 3. **Start Jupyter Lab:**
 
-From the `llm_engineering` folder, run: `jupyter lab`.
+From the `EduBot` folder, run: `jupyter lab`.
 
 Jupyter Lab should open in your browser. Close it after confirming it works, and proceed to Part 3.
 
@@ -84,7 +81,7 @@ Jupyter Lab should open in your browser. Close it after confirming it works, and
 
 2. **Navigate to the project root directory:**
 
-Use `cd ~/Projects/llm_engineering` and verify the folder contents with `ls`.
+Use `cd ~/Projects/EduBot` and verify the folder contents with `ls`.
 
 3. **Create a virtual environment:**
 
@@ -105,18 +102,16 @@ If issues occur, try the fallback:
 
 6. **Start Jupyter Lab:**
 
-From the `llm_engineering` folder, run: `jupyter lab`.
+From the `EduBot` folder, run: `jupyter lab`.
 
 ### Part 3 - OpenAI key (OPTIONAL but recommended)
 
-Particularly during weeks 1 and 2 of the course, you'll be writing code to call the APIs of Frontier models (models at the forefront of AI).
+You'll only need OpenAI, and you can add the others if you wish later on.
 
-For week 1, you'll only need OpenAI, and you can add the others if you wish later on.
-
-1. Create an OpenAI account if you don't have one by visiting:
+1. Create an OpenAI account if you don't have one by visiting:  
 https://platform.openai.com/
 
-2. OpenAI asks for a minimum credit to use the API. For me in the US, it's \$5. The API calls will spend against this \$5. On this course, we'll only use a small portion of this. I do recommend you make the investment as you'll be able to put it to excellent use. But if you'd prefer not to pay for the API, I give you an alternative in the course using Ollama.
+2. OpenAI asks for a minimum credit to use the API. For me in the US, it's \$5. The API calls will spend against this \$5.
 
 You can add your credit balance to OpenAI at Settings > Billing:  
 https://platform.openai.com/settings/organization/billing/overview
@@ -127,21 +122,13 @@ I recommend you disable the automatic recharge!
 
 The webpage where you set up your OpenAI key is at https://platform.openai.com/api-keys - press the green 'Create new secret key' button and press 'Create secret key'. Keep a record of the API key somewhere private; you won't be able to retrieve it from the OpenAI screens in the future. It should start `sk-proj-`.
 
-In week 2 we will also set up keys for Anthropic and Google, which you can do here when we get there.  
-- Claude API at https://console.anthropic.com/ from Anthropic
-- Gemini API at https://ai.google.dev/gemini-api from Google
-
-Later in the course you'll be using the fabulous HuggingFace platform; an account is available for free at https://huggingface.co - you can create an API token from the Avatar menu >> Settings >> Access Tokens.
-
-And in Week 6/7 you'll be using the terrific Weights & Biases at https://wandb.ai to watch over your training batches. Accounts are also free, and you can set up a token in a similar way.
-
 ### PART 4 - .env file
 
 When you have these keys, please create a new file called `.env` in your project root directory. The filename needs to be exactly the four characters ".env" rather than "my-keys.env" or ".env.txt". Here's how to do it:
 
 1. Open Terminal (Applications > Utilities > Terminal)
 
-2. Navigate to the "project root directory" using `cd ~/Documents/Projects/llm_engineering` (replace this path with the actual path to the llm_engineering directory, your locally cloned version of the repo).
+2. Navigate to the "project root directory" using `cd ~/Documents/Projects/EduBot` (replace this path with the actual path to the EduBot directory, your locally cloned version of the repo).
 
 3. Create the .env file with
 
@@ -178,7 +165,7 @@ This file won't appear in Jupyter Lab because jupyter hides files starting with 
 
 1. Open a terminal.
 2. Navigate to the "project root directory" using:
-`cd ~/Projects/llm_engineering`.
+`cd ~/Projects/EduBot`.
 3. Activate your environment:
    - If you used Anaconda: `conda activate llms`
    - If you used the alternative: `source llms/bin/activate`
